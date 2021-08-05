@@ -2,17 +2,19 @@ package com.demo.controllers;
 
 
 
-import com.demo.models.Contacts;
-import com.demo.models.Users;
+import com.demo.models.UsersBIC;
 import com.demo.services.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
+
 @RestController
-@RequestMapping(value ="/contacts")
+@RequestMapping(value ="/contactsBIC")
 public class ContactControllers {
 
     @Autowired
@@ -25,7 +27,7 @@ public class ContactControllers {
 
     }
     @RequestMapping(value = "/user", method= RequestMethod.GET)
-    public Contacts usuario(){
+    public UsersBIC usuario(){
 
     return contactService.usuarios();
     }
@@ -40,6 +42,11 @@ public class ContactControllers {
 
         return contactService.getemailFromDB();
     }
+    @RequestMapping(value = "/get-contact/{id}")
+    public Optional<UsersBIC> getUser(@PathVariable Long id){
 
+        return contactService.getUser(id);
     }
+}
+
 

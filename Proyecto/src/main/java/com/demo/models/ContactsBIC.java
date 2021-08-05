@@ -1,31 +1,53 @@
 package com.demo.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
 @Entity
-@Table (name = "crm_contacts")
-public class Contacts {
-
+@Table( name= "contactsBIC" )
+public class ContactsBIC {
     @Id
     @NotNull
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
-    @Size(max = 25 )
+    @NotBlank
+    @Size( max=20)
     private String name;
 
     @NotNull
-    @Size(max = 75 )
+    @NotBlank
+    @Size( max=32 )
+    private String password;
+
+    @NotNull
+    @Size( max=75 )
     private String email;
 
+    @NotNull
+    @NotBlank
+    @Size( max=20)
     private String phone;
 
     @NotNull
+    @NotBlank
+    @Size( max=20)
+    private String rol;
+
+    @NotNull
     private LocalDate dateCreated = LocalDate.now();
+
+    public LocalDate getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(LocalDate dateCreated) {
+        this.dateCreated = dateCreated;
+    }
 
     public Long getId() {
         return id;
@@ -41,6 +63,14 @@ public class Contacts {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {
@@ -59,12 +89,11 @@ public class Contacts {
         this.phone = phone;
     }
 
-    public LocalDate getDateCreated() {
-        return dateCreated;
+    public String getRol() {
+        return rol;
     }
 
-    public void setDateCreated(LocalDate dateCreated) {
-        this.dateCreated = dateCreated;
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 }
-

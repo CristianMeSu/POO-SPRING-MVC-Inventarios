@@ -1,8 +1,11 @@
 package com.demo.repositorio;
 
-import com.demo.models.Contacts;
+import com.demo.models.UsersBIC;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IContactsRepository extends JpaRepository <Contacts , Long> {
+import java.util.Optional;
 
+public interface IContactsRepository extends JpaRepository <UsersBIC, Long> {
+
+    Optional<UsersBIC> findAllById(Long id);
 }

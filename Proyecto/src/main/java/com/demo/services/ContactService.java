@@ -1,13 +1,14 @@
 package com.demo.services;
 
-import com.demo.models.Contacts;
-import com.demo.models.Users;
+import com.demo.models.UsersBIC;
+import com.demo.models.ContactsBIC;
 import com.demo.repositorio.IContactsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ContactService {
@@ -23,20 +24,23 @@ public class ContactService {
         return l ;
     }
 
-    public Contacts usuarios() {
-        Contacts l = new Contacts();
-        Users u = new Users();
+    public UsersBIC usuarios() {
+        UsersBIC l = new UsersBIC();
+        ContactsBIC u = new ContactsBIC();
 
         return l ;
     }
 
     public String getemail() {
-        Contacts l= new Contacts();
+        ContactsBIC l= new ContactsBIC();
         l.setEmail("cristian.mendoza.026@gmail.com");
         return l.getEmail();
     }
 
     public List getemailFromDB() {
         return contactsRepository.findAll();
+    }
+    public Optional<UsersBIC> getUser(Long id) {
+        return contactsRepository.findAllById(id);
     }
 }
