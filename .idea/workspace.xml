@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="707f6434-998c-40da-b047-946a8c5f5190" name="Default Changelist" comment="" />
+    <list default="true" id="707f6434-998c-40da-b047-946a8c5f5190" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/demo/controllers/ContactControllers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/demo/models/ContactsBIC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/demo/models/productosBIC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/demo/models/ventasBIC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/demo/repositorio/IContactsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/java/com/demo/services/ContactService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/src/main/resources/application.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -16,16 +34,30 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/cris/Unid/6to cuatri/POO/demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Xampp\htdocs\Proyecto-POO\Proyecto\target\classes" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -36,6 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628118605061</updated>
       <workItem from="1628118606287" duration="115000" />
+      <workItem from="1628291267257" duration="619000" />
     </task>
     <servers />
   </component>
