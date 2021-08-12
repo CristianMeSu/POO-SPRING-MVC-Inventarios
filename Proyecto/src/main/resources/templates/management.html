@@ -42,7 +42,7 @@
         <div class="collapse navbar-collapse" id="collapse_target">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a th:href="@{'/management/stock'}"><h2 class="nav-link" style="font-size: 18px">Stock Viewer</h2></a>
+                    <a th:href="@{'/management/stock'}"><h2 class="nav-link" style="font-size: 18px">Productos</h2></a>
                 </li>
                 <li class="nav-item">
                     <a th:href="@{'/management/categories'}"><h2 class="nav-link" style="font-size: 18px">Categorias</h2></a>
@@ -50,9 +50,7 @@
                 <li class="nav-item">
                     <a th:href="@{'/management/suppliers'}"><h2 class="nav-link" style="font-size: 18px">Proveedores</h2></a>
                 </li>
-                <li class="nav-item">
-                    <a th:href="@{'/profile/'}+${administrator.getId()}"><h2 class="nav-link" style="font-size: 18px">Perfil</h2></a>
-                </li>
+
                 <li class="nav-item">
                     <a th:href="@{'/index'}"><h2 class="nav-link text-muted" style="font-size: 18px">SignOut</h2></a>
                 </li>
@@ -64,17 +62,14 @@
 <!-- form struct -->
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-           aria-controls="profile" aria-selected="true">Administracion</a>
+        <a class="nav-link" id="category-tab" data-toggle="tab" href="#addCategory" role="tab"
+           aria-controls="addCategory" aria-selected="true">Agregar categoria</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" id="product-tab" data-toggle="tab" href="#addProduct" role="tab"
            aria-controls="addProduct" aria-selected="false">Agregar producto</a>
     </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" id="category-tab" data-toggle="tab" href="#addCategory" role="tab"
-           aria-controls="addCategory" aria-selected="false">Agregar categoria</a>
-    </li>
+
     <li class="nav-item" role="presentation">
         <a class="nav-link" id="supplier-tab" data-toggle="tab" href="#addSupplier" role="tab"
            aria-controls="addSupplier" aria-selected="false">Agregar proveedor</a>
