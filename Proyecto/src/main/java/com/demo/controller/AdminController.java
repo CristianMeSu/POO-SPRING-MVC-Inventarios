@@ -73,49 +73,16 @@ public class AdminController {
         model.addAttribute("suppliers", supplierService.findAll());
 
 
-        int totalProducts = totalStok(productService.findAll());
-
-
-
-
-        model.addAttribute("totalStock", totalStok(productService.findAll()) );
-
-        //filtrar por categorias y sacar los porcentajes
 
 
 
 
 
-        //mandar cantidad de productos
-        int cantidadProductos = productService.findAll().size();
-        model.addAttribute("cantidadProductos", cantidadProductos);
-
-        //mandar cantidad de categorias
-        int cantidadCategorias = categoryService.findAll().size();
-        model.addAttribute("cantidadCategorias", cantidadCategorias);
-
-        //mandar cantidad de proveedores
-        int cantidadProveedores = supplierService.findAll().size();
-        model.addAttribute("cantidadProveedores",cantidadProveedores);
 
         return "management";
     }
 
-    /**
-     * este metodo me sirve para calcular la cantidad total de
-     * productos que estan registardos en el almacen
-     * @param products
-     * @return
-     */
-    private int totalStok(List<Product>products) {
-        int totalStok = 0;
 
-        for (Product product : products) {
-            totalStok += product.getAmount();
-        }
-
-        return totalStok;
-    }
 
     /**
      * Endpoint donde se almacena en la base de datos el producto.
@@ -372,12 +339,7 @@ public class AdminController {
         return "redirect:/management/suppliers";
     }
 
-    @GetMapping("/profile/{idAdministrator}")
-    public String getProfile(@PathVariable int idAdministrator,Model model) {
-        Optional<Administrator> administrator = administratorService.findById(idAdministrator);
-        model.addAttribute("administrator",administrator.get());
-        return "profile";
-    }
+
 
     /**
      * Queda pendiente recuerda que la clave para resolverlo puede ser crear una clase para esto
