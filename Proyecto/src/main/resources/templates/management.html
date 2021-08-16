@@ -83,36 +83,9 @@
     <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab"
          th:object="${administrator}">
 
-        <!--        grafica ToDo-->
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/data.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com/modules/export-data.js"></script>
-        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-        <figure class="highcharts-figure">
-            <div id="containerJSGraphStock"></div>
-            <p class="highcharts-description">
-            </p>
-        </figure>
 
-        <figure class="highcharts-figure">
-            <div id="containerGraphPercentByProduct"></div>
-            <p class="highcharts-description">
-            </p>
-        </figure>
 
-        <figure class="highcharts-figure">
-            <div id="containerGraphPercentByCategory"></div>
-            <p class="highcharts-description">
-            </p>
-        </figure>
-
-        <figure class="highcharts-figure">
-            <div id="containerGraphPercentBySupplier"></div>
-            <p class="highcharts-description">
-            </p>
-        </figure>
 
         <div class="graphContainers">
             <div class="card-graph">
@@ -144,11 +117,7 @@
     <div class="tab-pane fade" id="addProduct" role="tabpanel" aria-labelledby="product-tab">
         <form th:action="@{'/auth/save/product'}" th:object="${product}" method="post">
             <!--id-->
-            <div class="form-group">
-                <label for="idProduct">ID Producto</label>
-                <input th:field="*{idProduct}" type="number" class="form-control" id="idProduct"
-                       required="required" disabled="disabled">
-            </div>
+
             <!--category-->
             <div class="input-group mb-3">
                 <div class="input-group-append">
@@ -216,11 +185,7 @@
     <div class="tab-pane fade" id="addCategory" role="tabpanel" aria-labelledby="category-tab">
         <form th:action="@{'/auth/save/category'}" th:object="${category}" method="post">
             <!--idCategory-->
-            <div class="form-group">
-                <label for="idCategory">ID Categoria</label>
-                <input th:field="*{idCategory}" type="number" class="form-control" id="idCategory" required="required"
-                       disabled="disabled">
-            </div>
+
 
             <!--nameCategory-->
             <div class="form-group">
@@ -238,11 +203,7 @@
     <div class="tab-pane fade" id="addSupplier" role="tabpanel" aria-labelledby="supplier-tab">
         <form th:action="@{'/auth/save/supplier'}" th:object="${supplier}" method="post">
             <!--idSupplier-->
-            <div class="form-group">
-                <label for="idSupplier">ID Proveedor</label>
-                <input th:field="*{idSupplier}" type="number" class="form-control" id="idSupplier" required="required"
-                       disabled="disabled">
-            </div>
+
 
             <!--name supplier-->
             <div class="form-group">
@@ -257,7 +218,7 @@
     </div>
 </div>
 <div>
-    <img src="/static/img/dragon.jpg" width="1920" height="1080">
+    <img src="/img/cajas.jpg" width="1500" height="600">
 
 </div>
 

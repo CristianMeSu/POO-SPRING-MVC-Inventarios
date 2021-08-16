@@ -42,8 +42,8 @@
 <form th:action="@{'/auth/update/supplier'}" th:object="${supplier}" method="post">
     <!--idSupplier-->
     <div class="form-group">
-        <label for="idSupplier">ID Proveedor</label>
-        <input th:field="*{idSupplier}" type="number" class="form-control" id="idSupplier" required="required">
+
+        <input th:field="*{idSupplier}" type="hidden" class="form-control" id="idSupplier" required="required">
     </div>
 
     <!--name supplier-->

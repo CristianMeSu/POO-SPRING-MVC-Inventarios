@@ -39,8 +39,8 @@
 <form th:action="@{'/auth/update/product'}" th:object="${product}" method="post">
     <!--id-->
     <div class="form-group">
-        <label for="idProduct">ID Producto</label>
-        <input th:field="*{idProduct}" type="number" class="form-control" id="idProduct"
+
+        <input th:field="*{idProduct}" type="hidden" class="form-control" id="idProduct"
                required="required">
     </div>
     <!--category-->
